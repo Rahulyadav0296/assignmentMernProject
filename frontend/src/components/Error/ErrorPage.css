@@ -1,0 +1,21 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+.not-found-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ff6347; /* You can choose a different color if you prefer */
+}
+
+.not-found-message {
+  font-size: 18px;
+  color: #666;
+}

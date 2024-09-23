@@ -1,0 +1,71 @@
+/* Container for the whole component */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Button styling */
+.create-btn {
+  background-color: #4caf50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.create-btn:hover {
+  background-color: #45a049;
+}
+
+/* Wrapper for ShowUsers and CreateUser sections */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ShowUsers section styling */
+.show-users {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* CreateUser section styling */
+.create-user {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .content-wrapper {
+    flex-direction: row; /* CreateUser on the right, ShowUsers on the left */
+    justify-content: space-between;
+  }
+
+  .show-users,
+  .create-user {
+    flex: 0 0 48%; /* Adjusting width for both sections on desktop */
+  }
+}
+
+/* Mobile responsive layout */
+@media (max-width: 767px) {
+  .content-wrapper {
+    flex-direction: column; /* Stacked layout for mobile screens */
+  }
+
+  .show-users,
+  .create-user {
+    flex: 1;
+  }
+}

@@ -1,0 +1,63 @@
+/* General table styling */
+.table-container {
+  margin: 1rem auto;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.user-table th,
+.user-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.user-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-table td {
+  font-family: "Rubik", sans-serif;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .user-table th,
+  .user-table td {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-table th,
+  .user-table td {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+  }
+
+  .table-container {
+    padding: 0 1rem;
+  }
+}
+
+/* For even smaller screens */
+@media (max-width: 360px) {
+  .user-table th,
+  .user-table td {
+    font-size: 0.7rem;
+    padding: 0.2rem;
+  }
+}

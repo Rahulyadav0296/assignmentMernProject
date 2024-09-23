@@ -1,0 +1,21 @@
+version: "3"
+services:
+  # Node.js service
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      - MONGO_URL=${MONGO_URL}
+    depends_on:
+      - db
+
+  # MongoDB service (optional if you're using Atlas)
+  db:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db

@@ -1,0 +1,132 @@
+/* BlogModal.css */
+
+.modal-open {
+  transform: translate(-50%, -50%) scale(1); /* Normal scale */
+  opacity: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 90vh; /* Limit the modal's height */
+  width: 90%;
+  max-width: 600px; /* Set a max width */
+  overflow: hidden; /* Ensure content is hidden outside of modal */
+}
+.modal-close {
+  transform: translate(-50%, -50%) scale(0.9); /* Scale down when closing */
+  opacity: 0;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-family: "Rubik", system-ui;
+  background-color: #fff;
+  z-index: 2; /* Ensure it stays visible */
+  position: sticky;
+  top: 0; /* Fix the header at the top */
+  padding: 1rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.close-icon {
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s;
+}
+
+.close-icon:hover {
+  color: #000;
+}
+
+.modal-info {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: left;
+  font-family: "Radio Canada Big", system-ui;
+}
+
+.modal-date {
+  font-size: 0.9rem;
+  color: #666;
+  font-family: "Radio Canada Big", system-ui;
+  margin-right: 10px;
+}
+
+.modal-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0;
+  overflow: hidden; /* Prevent overflow of image beyond modal width */
+}
+
+.modal-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-height: 300px; /* Add a max height */
+  object-fit: cover; /* Ensure the image is proportionally scaled */
+}
+
+.modal-content {
+  flex-grow: 1;
+  margin: 1rem 0;
+  line-height: 1.5;
+  font-family: "Radio Canada Big", system-ui;
+  overflow-y: auto; /* Allow scrolling in the content area */
+  padding-right: 1rem; /* Prevent content from being hidden under scrollbar */
+  max-height: calc(
+    80vh - 100px
+  ); /* Ensure content doesn't exceed modal height */
+}
+.modal-author {
+  margin-top: 1.5rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  position: sticky;
+  bottom: 0; /* Stick the author section to the bottom */
+  background-color: #fff;
+  z-index: 2;
+}
+.modal-author h4 {
+  margin: 0.5rem 0;
+}
+
+/* Ensure modal content can scroll when height exceeds the screen */
+.modal-body {
+  max-height: 80vh; /* Modal should take 80% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  padding-right: 1rem; /* Add padding to prevent scrollbars overlapping content */
+}
+
+/* For author section */
+.modal-author h4 {
+  margin: 0.5rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .modal-title {
+    font-size: 1.25rem;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modal-date {
+    font-size: 0.8rem;
+  }
+
+  .modal-image img {
+    max-height: 300px; /* Adjust for smaller screens */
+  }
+}
